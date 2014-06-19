@@ -21,7 +21,7 @@ test:
 production:
   adapter: postgresql
   encoding: unicode
-  database: db/production.db
+  database: db/hangout-link_production
   pool: 5
   username: myapp
   password:
