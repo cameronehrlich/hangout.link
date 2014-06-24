@@ -1,0 +1,16 @@
+<h2>Profile</h2>
+
+<%= form_for(@user, :url => {:action => 'update'}, method: :POST) do |f| %>
+<%= label_tag :name %>
+<%= f.text_field :name %> <br>
+
+<%= label_tag :email %>
+<%= f.text_field :email %> <br>
+
+<%= label_tag :subdomain %>
+<%= f.text_field :subdomain %> <br> 
+
+<%= submit_tag("Update") %>
+<% end %>
+
+
