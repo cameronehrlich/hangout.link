@@ -4,9 +4,7 @@ class User < ActiveRecord::Base
 	
 	devise :database_authenticatable, :recoverable, :rememberable, :trackable, :validatable, :omniauthable
 	
-	validates  :subdomain, 	:presence   => true,
-							:uniqueness => true,
-							:subdomain  => true
+	validates  :subdomain, :uniqueness => true
 
 	def self.find_for_google_oauth2(access_token, signed_in_resource=nil)
 		data = access_token.info
@@ -18,11 +16,11 @@ class User < ActiveRecord::Base
 			if registered_user
 				return registered_user
 			else
-				user = User.create(	name: data["name"],
-									provider: access_token.provider,
-									email: data["email"],
-									uid: access_token.uid,
-									password: Devise.friendly_token[0,20])
+				user = User.create(name: data["name"],
+					provider: access_token.provider,
+					email: data["email"],
+					uid: access_token.uid,
+					password: Devise.friendly_token[0,20])
 			end
 		end
 	end
