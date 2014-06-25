@@ -1,0 +1,73 @@
+#signup-choose-domain {
+    display:block;
+}
+
+#signup-credit-info {
+    display:none;
+}
+
+#start-your-free-month {
+    display:none;
+}
+
+#signup-content {
+    padding-top:3%;
+    padding-left:10%;
+}
+
+#chosen-link, {
+    margin-top:40px;
+}
+
+#choose-another-link {
+    margin-top:20px;
+}
+
+#checkmark {
+    display:inline-block;
+    width: 22px;
+    height:22px;
+    -ms-transform: rotate(45deg); /* IE 9 */
+    -webkit-transform: rotate(45deg); /* Chrome, Safari, Opera */
+    transform: rotate(45deg);
+}
+
+#stem {
+    position: absolute;
+    width:6px;
+    height:24px;
+    background-color:green;
+    left:15px;
+    top:-5px;
+}
+
+#kick {
+    position: absolute;
+    width:6px;
+    height:6px;
+    background-color:green;
+    left:10px;
+    top:13px;
+}
+
+.green-check-text {
+    color:green;
+}
+
+
+#check-avail-signup-btn {
+    margin-left:10px;
+    margin-bottom:5px;x
+    background-color:green;
+    border-color:green;
+}
+
+label {
+    color:grey;
+}
+
+#promote-input {
+    padding:5px;
+    width:250px;
+    color:grey;
+}

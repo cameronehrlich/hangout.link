@@ -1,0 +1,124 @@
+<div id='signup-content' class='container'>
+    
+    <!-- Page One -->
+    <div id='signup-choose-domain'>
+        <h1 id='signup-choose-domain-header'>
+            Pick your personal Hangouts Address
+        </h1>
+        <h3 id='chosen-link' class='grey-text'>
+            https://<span id='signup-chosen-url'>samir</span>.hangouts.link&nbsp;
+            <span id="checkmark">
+                <div id="stem"></div>
+                <div id="kick"></div>
+            </span>
+            <span class='green-check-text'>&nbsp;Available</span>
+        </h3>
+        <h4 class='arial grey-text' style='margin-top:60px'> 
+            Or try a different one, and find the URL you like the most.
+        </h4>
+        <h3 id='choose-another-link' class='grey-text'>
+            https://<input id='subdomain-input' class='grey-text' type='text'></input>.hangouts.link<button type="button" id='check-avail-signup-btn' class="btn btn-default g-btn g-btn-green arial">Check Availability</button>
+        </h3>
+        <h4 class='arial grey-text' style='margin-top:40px'>    
+            Sign up with your Google Plus email address
+        </h4>
+        <a id='sign-in-btn' href='#'>
+            <%= image_tag('/assets/img/signin-google.png', height:'50')%> 
+        </a>
+    </div>
+    
+    <!-- Page Two -->
+    <div id='signup-credit-info'>
+        <h1>
+            Reserve your domain for $1 per year
+        </h1>
+        <h3 class='arial grey-text' style='margin-top:25px'> 
+            For $1, the following domain will be reserved for you until <b>6/22/2015</b>
+        </h3>
+        <h4 class='grey-text' style='margin-top:30px'>
+            http://<span class='confirmed-subdomain-text'>tiffany</span>.hangouts.link&nbsp;
+            <span id="checkmark">
+                <div id="stem"></div>
+                <div id="kick"></div>
+            </span>
+            <span class='green-check-text'>&nbsp;Available</span>
+        </h4>
+        <h1 style='margin-top:50px'>
+            Credit Card Information
+        </h1>
+        <h3 class='arial grey-text' style='margin-top:25px'> 
+            You won't be charged until you confirm your payment.
+        </h3>
+        <form class="form-inline" style='margin-top:15px;margin-bottom:20px'role="form">
+            <div class="form-group">
+                <label for="exampleInputEmail1">Card Number&nbsp;&nbsp;</label>
+                <input type="email" class="form-control" id="card-input">
+            </div>
+            <div id='cvv-form-group'class="form-group">
+                <label for="exampleInputEmail1">CCV&nbsp;&nbsp;</label>
+                <input type="email" class="form-control" id="ccv-input">
+            </div>
+        </form>
+        <a id='next-step-signup-btn' href='javascript:void(0);'>
+            <button type="button" class="btn btn-default navbar-btn g-btn g-btn-blue">Next Step</button>
+        </a>
+    </div>
+    
+    <!-- Page Three -->
+    <div id='start-your-free-month'>
+        <h1>
+            Use your private Hangout room for $5 a month, 1st month FREE
+        </h1>
+        <h3 class='arial grey-text' style='margin-top:20px'> 
+            Your free month ends on <b><span id='expiration-date'>7/22</span></b>. If it doesn't work out for you, simply log back in and cancel.
+        </h3>
+        <h4 class='arial grey-text'style='margin-top:40px; margin-bottom:10px'>
+            Promote/Referral Code (if your friend referred you, both of you get an extra free month)
+            <br>
+        </h4>
+        <input id='promote-input' type='text'></input>
+        <h4 class='arial grey-text' style='margin-top:30px'>
+            <div class='row'>
+                <div class='col-xs-10 col-md-5'>
+                    1 year domain reservation for <u><i><span class='confirmed-subdomain-text'>tiffany</span>.hangouts.link</u></i>
+                </div>
+                <div class='col-xs-2 col-md-1'>
+                    $1
+                </div>
+            </div>
+        </h4>
+        <div style='border-bottom:1px solid grey;'>
+            <h4 class='arial grey-text' style='margin-top:30px;'>
+                <div class='row'>
+                    <div class='col-xs-10 col-md-5'>
+                        1 month private Hangout room usage 
+                    </div>
+                    <div class='col-xs-2 col-md-1'>
+                        $0
+                    </div>
+                </div>
+            </h4>
+        </div>
+        <h4>
+            <div class='row grey-text arial'>
+                <div class='col-xs-10 col-md-5'>
+                    <b><i>Total</b></i>
+                </div>
+                <div class='col-xs-2 col-md-1'>
+                    <b>$1</b>
+                </div>
+            </div>
+        </h4>
+        <h6 class='grey-text' style='margin-top:30px'>
+            Your subscription, which starts with a 1 month free offer, will begin when you click Start Your Free Month. 
+            By clicking Start Your Free Month, you authorize us to continue your month-to-month Hangout.Link subscription 
+            (currently $5) automatically, charged monthly to the payment method provided, until you cancel.
+        </h6>
+        <h4 class='arial grey-text' style='margin-top:30px; margin-bottom:10px'>
+            <input type='checkbox'> I am over 13, and I agree to the above conditions and the Terms of Use and Privacy Policy.
+        </h4>
+        <a id='next-step-signup-btn' href='javascript:void(0);'>
+            <button type="button" class="btn btn-default navbar-btn g-btn g-btn-blue">Start Your Free Month</button>
+        </a>
+    </div>
+</div>

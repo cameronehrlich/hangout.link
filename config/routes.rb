@@ -4,6 +4,7 @@ HangoutLinkRails::Application.routes.draw do
   
   root to: 'home#index'
   get 'index'   => 'home#index'
+  get 'signup' => 'home#signup'
   get 'profile' => 'home#profile'
   get 'update'  => 'home#profile'
   post 'update' => 'home#update'

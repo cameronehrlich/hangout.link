@@ -13,3 +13,20 @@
 //= require jquery
 //= require jquery_ujs
 //= require_tree .
+//= require_self
+
+$('#signup-choose-domain').hide();
+$('#signup-credit-info').show();
+
+$(document).ready(function() {
+    $('#sign-in-btn').click(function() {
+        // TODO: check availability with server, only if available, connect with google
+        $('#signup-choose-domain').hide();
+        $('#signup-credit-info').show();
+    });
+
+    $('#next-step-signup-btn').click(function() {
+        $('#signup-credit-info').hide();
+        $('#start-your-free-month').show(); 
+    });
+})

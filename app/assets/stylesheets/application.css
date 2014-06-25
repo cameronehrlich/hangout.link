@@ -11,6 +11,7 @@
  *= require_tree .
  *= require bootstrap.min
  *= require_self
+ *= require signup
  */
 
 .g-btn {
@@ -30,6 +31,10 @@
     border-color:#6abc44;
 }
 
+.grey-text {
+    color:grey;
+}
+
 nav {
     padding-top:15px;
     padding-bottom:15px;
@@ -37,11 +42,11 @@ nav {
 }
 
 .navbar-nav.navbar-right:last-child {
-    margin-right:5%;
+    margin-right:13%;
 }
 
 .navbar>.container .navbar-brand, .navbar>.container-fluid .navbar-brand {
-    margin-left:5%;
+    margin-left:13%;
     position:absolute;
     margin-top:-10px;
 }
@@ -68,12 +73,11 @@ nav {
 
 #content {
     padding-top:5%;
-    padding-left:5%;
+    padding-left:15%;
 }
 
 h1, h2, h3 {
-    font-family: 'Roboto', sans-serif;
-    font-weight: bold;
+    font-family: 'Roboto Condensed';
 }
 
 #header-text, #subheader-text {
@@ -168,4 +172,21 @@ h1, h2, h3 {
 
 .value-content {
     color:grey;
+}
+
+.arial {
+    font-family:arial;
+    font-weight:100;
+}
+
+#card-input {
+    width:250px;
+}
+
+#ccv-input {
+    width:120px;
+}
+
+#cvv-form-group {
+    margin-left:40px;
 }
