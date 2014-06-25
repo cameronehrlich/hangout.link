@@ -13,6 +13,7 @@
  *= require_self
  *= require signup
  *= require account
+ *= require entry
  */
 
 .g-btn {
