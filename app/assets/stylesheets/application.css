@@ -12,6 +12,7 @@
  *= require bootstrap.min
  *= require_self
  *= require signup
+ *= require account
  */
 
 .g-btn {
@@ -24,11 +25,37 @@
 .g-btn-blue {
     background-color:#4d90fe;
     border-color:#4d90fe;
+    color:white;
+}
+
+.g-btn-blue:hover {
+    background-color:#4d90fe;
+    border-color:#4d90fe;
+    color:white;
 }
 
 .g-btn-green {
     background-color:#6abc44;
     border-color:#6abc44;
+    color:white;
+}
+
+.g-btn-green:hover {
+    background-color:#6abc44;
+    border-color:#6abc44;
+    color:white;
+}
+
+.g-btn-red {
+    background-color:#dd4b39;
+    border-color:#dd4b39;
+    color:white;
+}
+
+.g-btn-red:hover {
+    background-color:#dd4b39;
+    border-color:#dd4b39;
+    color:white;
 }
 
 .grey-text {

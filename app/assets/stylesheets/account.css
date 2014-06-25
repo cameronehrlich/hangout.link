@@ -1,0 +1,55 @@
+#account-content {
+    padding-top:3%;
+    padding-left:10%;
+}
+
+#hangout-room-name-text {
+    display:inline-block;
+    position:relative;
+}
+
+#edit-icon {
+    /*position:absolute;*/
+    padding-bottom: 15px;
+}
+
+#lock-icon, #question-icon {
+    margin-bottom:10px;
+}
+
+#account-hangout-link-text {
+    display:inline-block;
+}
+
+#add-room-key-header {
+    display:inline-block;
+}
+
+#hangout-room-key {
+    padding:5px;
+}
+
+#next-billing-date-text {
+    display:inline-block;
+}
+
+.align-right {
+    float:right;
+    text-align: right;
+}
+
+#cancel-subscription-yearly-btn {
+    margin-left:25px;
+}
+
+#cancel-subscription-monthly-btn {
+    margin-left:25px;
+}
+
+#invite-google-contacts {
+    margin-top:10px;
+}
+
+#share-on-fb {
+    margin-top:8px;
+}
