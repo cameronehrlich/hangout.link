@@ -3,6 +3,12 @@ HangoutLinkRails::Application.routes.draw do
   devise_for :users, :controllers => { :omniauth_callbacks => "omniauth_callbacks" }
   
   root to: 'home#index'
+  get 'index'   => 'home#index'
+  get 'profile' => 'home#profile'
+  get 'update'  => 'home#profile'
+  post 'update' => 'home#update'
+
+  get 'api/check_subdomain'
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
