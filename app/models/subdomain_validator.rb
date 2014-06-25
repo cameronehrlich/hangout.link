@@ -12,5 +12,4 @@ class SubdomainValidator < ActiveModel::EachValidator
 		object.errors[attribute] << 'cannot start or end with a hyphen' unless value =~ /^[^-].*[^-]$/i                                                                                                    
 		object.errors[attribute] << 'must be alphanumeric; A-Z, 0-9 or hyphen' unless value =~ /^[a-z0-9\-]*$/i
 	end
-	
 end

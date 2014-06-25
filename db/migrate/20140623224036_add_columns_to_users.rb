@@ -4,5 +4,6 @@ class AddColumnsToUsers < ActiveRecord::Migration
     add_column :users, :uid, :string
     add_column :users, :name, :string
     add_column :users, :subdomain, :string
+    add_column :users, :image, :string
   end
 end
