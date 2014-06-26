@@ -15,9 +15,6 @@
 //= require_tree .
 //= require_self
 
-$('#signup-choose-domain').hide();
-$('#signup-credit-info').show();
-
 $(document).ready(function() {
     $('#sign-in-btn').click(function() {
         // TODO: check availability with server, only if available, connect with google
@@ -29,4 +26,21 @@ $(document).ready(function() {
         $('#signup-credit-info').hide();
         $('#start-your-free-month').show(); 
     });
-})
+    $('#check-avail-btn').click(function() {
+        if (!$('#subdomain-input').val()) {
+            //don't do anything if text is empty
+            $(this).css({'background-color':'#6abc44', 'border-color':'#6abc44', 'color':'white'});
+            return;
+        } else {
+            window.location.href = '/signup/'
+        }
+    });
+    $('#signup-nav-btn').click(function() {
+        window.location.href ='/signup/';
+    })
+});
+
+window.onbeforeunload = function(event)
+{
+    return confirm("Are you sure you want to refresh? You will lose all signup progress");
+};
