@@ -1,0 +1,88 @@
+<div id='account-content' class='container'>
+    <div id='hangout-room-name'>
+        <h1 id='hangout-room-name-text'>
+            Tiffany's Whore House
+        </h1>
+        <%= image_tag('/assets/img/edit.svg', height:'50', id:'edit-icon')%> 
+    </div>
+
+    <div id='account-hangout-link' class='row'>
+        <div class='col-xs-12 col-md-6'>
+            <h3 id='account-hangout-link-text' class='arial'>
+                <a href='http://tiffany.hangouts.link'>http://tiffany.hangouts.link</a>
+            </h3>
+            <%= image_tag('/assets/img/account-unlock.svg', height:'20', id:'lock-icon')%> 
+        </div>
+        <div class='col-xs-12 col-md-5'>
+            <div class='add-room-key-containter' class='align-right'>
+                <h3 id='add-room-key-header' class='arial grey-text'>
+                    Add Room Key&nbsp;
+                </h3>
+                <%= image_tag('/assets/img/question.svg', height:'20', id:'question-icon')%> &nbsp;&nbsp;
+                <input id='hangout-room-key' type='text'></input>
+            </div>
+        </div>
+    </div>
+
+    <div id='subscription-details'>
+        <div id='your-subscription-text' style='margin-top:40px'>
+            <h1> Your Subscription </h1>
+        </div>
+        <h4 class='arial grey-text'> <b>Domain reservation for <i><u>tiffany.hangouts.link</i></u></b>
+        </h4>
+        <div class='row'>
+            <div class='col-xs-12 col-md-offset-1 col-md-7'>
+                <h4 id='next-billing-date-text'class='arial grey-text'> 
+                    Next billing date: <b><span id='next-billing-date'>6/22/2015</span></b>
+                    &nbsp;&nbsp; <span class='green-text'>$1 per year</span>
+                </h4>
+            </div>
+            <div class='col-xs-12 col-md-3'>
+                <button type="button" id='cancel-subscription-yearly-btn' class="btn btn-default g-btn g-btn-red arial">Cancel Subscription</button>
+            </div>
+        </div>
+
+        <h4 class='arial grey-text'> <b>Monthly Hangout Room Service</b>
+        </h4>
+        <div class='row'>
+            <div class='col-xs-12 col-md-offset-1 col-md-7'>
+                <h4 id='next-billing-date-text'class='arial grey-text'> 
+                    Next billing date: <b><span id='next-billing-date'>6/22/2015</span></b>
+                    &nbsp;&nbsp; <span class='green-text'>$5 per month</span>
+                </h4>
+            </div>
+            <div class='col-xs-12 col-md-3'>
+                <button type="button" id='cancel-subscription-monthly-btn' class="btn btn-default g-btn g-btn-red arial">Cancel Subscription</button>
+            </div>
+        </div>
+    </div>
+
+    <div id='referral-details'>
+        <div id='your-referrals-text' style='margin-top:40px'>
+            <h1> Your referrals
+        </div>
+        <h4 class='arial grey-text'> 
+            Total free month referral credits earned: <b><span id='referral-credits-earned'>2</span></b>
+            (<b><span id='referral-credits-scheduled'>1</span></b> scheduled, <b><span id='referral-credits-used'>1</span></b> used)
+        </h4>
+        <h4 class='arial grey-text' style='margin-top:20px'>
+            Your referral URL: <b>http://hangouts.link/tiffany</b>
+        </h4>
+        <div class='row'>
+            <div class='col-xs-12 col-md-3'>
+                <h4 class='arial grey-text' style='margin-top:15px'>
+                    Your referral Code: <b>tiffany</b>
+                </h4>
+            </div>
+            <div class='col-xs-12 col-md-offset-2 col-md-3'>
+                <button type='button' id='invite-google-contacts' class='btn btn-default g-btn g-btn-blue arial'>
+                    Invite Your Google Contacts
+                </button>
+            </div>
+            <div class='col-xs-12 col-md-3'>
+                <%= image_tag('/assets/img/facebook_share.gif', height:'35', id:'share-on-fb')%> 
+            </div>
+        </div>
+    </div>
+
+</div>

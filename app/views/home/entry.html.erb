@@ -1,0 +1,39 @@
+<div id='entry-content'>
+    <h1> You are about to join a Hangouts with </h1>
+    <h4 class='grey-text arial' style='margin-top:15px; margin-bottom:10px' id='owner-email'> tiffany1988@gmail.com </h4>
+    <%= image_tag('/assets/img/default-photo.png', height:'100', class:'default-photo')%> 
+    <h1 style='margin-top:25px'> at "<span id='owner-room-name'>Tiffany's Whore House</span>" </h1>
+    <h4 class='grey-text arial' style='margin-top:20px'>Enter Room Key</h4>
+    <div id='room-key-container'>
+        <%= image_tag('/assets/img/account-lock.svg', height:'20', id:'entry-lock-icon')%> 
+        <input type='text' id='hangout-room-password'>
+        </input>
+    </div>
+    <br>
+    <div id='enter-btn-container'>
+        <button type="button" id='enter-hangout-room' class="btn btn-default g-btn g-btn-green arial">Enter
+        </button>
+    </div>
+    <h4 class='grey-text arial'>
+        <i>
+            The host needs to be in the room already for you to enter
+        </i>
+    </h4>
+    <div id='own-hangout-container' style='margin-top:60px'>
+        <button type="button" id='enter-hangout-room' class="btn btn-default g-btn g-btn-blue arial">Get Your Own Hangout URL
+        </button>
+    </div>
+    <br>
+    <h5 class='grey-text arial' style='margin:0 auto; padding:0px'>
+        <i>
+            (This opens in a new tab)
+        </i>
+    </h5>
+
+    <div id='powered-by-container' class='row' style='margin-top:40px'>
+        <h5 id='powered-by-text' class='grey-text arial'>
+        Powered by&nbsp;&nbsp;&nbsp;
+        </h5>
+        <%= image_tag('/assets/img/logo.png', height:'50')%> 
+    </div>
+</div>

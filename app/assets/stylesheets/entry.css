@@ -1,0 +1,23 @@
+#entry-content {
+    text-align:center;
+    padding-top:5%;
+}
+
+#room-key-container {
+    position:relative;
+}
+
+#entry-lock-icon {
+    position:absolute;
+    margin-left:-25px;
+    top:3px;
+}
+
+#enter-hangout-room {
+    margin-left:0px;
+    border-radius:2px;
+}
+
+#powered-by-text {
+    display:inline-block;
+}
