@@ -1,6 +1,3 @@
-<!-- <h1>Hangout with <%= request.subdomain %></h1>
-<%= link_to "Hangout", @hangout_link %>
- -->
 <div id='main'>
     <div id='banner'>
         <div id='content'>
@@ -15,59 +12,53 @@
                     http:// <input id='subdomain-input' type='text'></input> .hangout.link 
                     <button type="button" id='check-avail-btn'class="btn btn-default g-btn g-btn-green">Check Availability</button>
                 </div>
+                <div id="feedback-div"></div>
             </div>
         </div>
     </div>
     <div id='value'>
         <div class='row'>
             <div class='col-xs-12 col-md-offset-1 col-md-10'>
-                    <div class='col-xs-12 col-md-4'>
-                        <%= image_tag('/assets/img/hammock.svg', height:'40')%><br>
-                        <div class='value-content'>
-                            <div class='blue-text'>
-                                <h4>Convenient</h4>
-                            </div>
-                            <p>
-                                Send the URL, and you are done! <br>
-                                Never need to add people, find <br>
-                                them and call them again.
-                            </p>
+                <div class='col-xs-12 col-md-4'>
+                    <%= image_tag('/assets/img/hammock.svg', height:'40')%><br>
+                    <div class='value-content'>
+                        <div class='blue-text'>
+                            <h4>Convenient</h4>
                         </div>
+                        <p>
+                            Send the URL, and you are done! <br>
+                            Never need to add people, find <br>
+                            them and call them again.
+                        </p>
                     </div>
-                    <div class='col-xs-12 col-md-4'>
-                        <%= image_tag('/assets/img/video_icon.svg', height:'40')%><br>
-                        <div class='value-content'>
-                            <div class='red-text'>
-                                <h4>Swag</h4>
-                            </div>
-                            <p>
-                                Be the host of the conversation,<br>
-                                and enjoy the perks of having<br>
-                                people come to your meeting room.
-                            </p>
+                </div>
+                <div class='col-xs-12 col-md-4'>
+                    <%= image_tag('/assets/img/video_icon.svg', height:'40')%><br>
+                    <div class='value-content'>
+                        <div class='red-text'>
+                            <h4>Swag</h4>
                         </div>
+                        <p>
+                            Be the host of the conversation,<br>
+                            and enjoy the perks of having<br>
+                            people come to your meeting room.
+                        </p>
                     </div>
-                    <div class='col-xs-12 col-md-4'>
-                        <%= image_tag('/assets/img/lock.svg', height:'40')%> <br>
-                        <div class='value-content'>
-                                <div class='green-text'>
-                                <h4>Security</h4>
-                            </div>
-                            <p>
-                                Don't worry about randos crashing<br>
-                                your private room. Set up room entry<br>
-                                code and room name in seconds.
-                            </p>
+                </div>
+                <div class='col-xs-12 col-md-4'>
+                    <%= image_tag('/assets/img/lock.svg', height:'40')%> <br>
+                    <div class='value-content'>
+                        <div class='green-text'>
+                            <h4>Security</h4>
                         </div>
+                        <p>
+                            Don't worry about randos crashing<br>
+                            your private room. Set up room entry<br>
+                            code and room name in seconds.
+                        </p>
                     </div>
+                </div>
             </div>
         </div>
     </div>
 </div>
-
-<!-- <h1>Hangout.link</h1>
-
-<% if user_signed_in? %>
-	<%= current_user.name %>
-<% end %> -->
-

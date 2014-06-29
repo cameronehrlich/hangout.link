@@ -1,3 +1,4 @@
+require 'api_controller'
 class HomeController < ApplicationController
   def index
   	if user_signed_in?
@@ -27,6 +28,14 @@ class HomeController < ApplicationController
       redirect_to profile_path
     end
 
+  end
+
+  def signup
+    if self.validate_subdomain(params[:subdomain])[:valid]
+      render params[:page]  
+    else
+      redirect_to root_path
+    end
   end
 
   private
