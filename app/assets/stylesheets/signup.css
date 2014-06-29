@@ -15,7 +15,7 @@
     padding-left:10%;
 }
 
-#chosen-link, {
+#chosen-link {
     margin-top:40px;
 }
 
@@ -61,11 +61,11 @@
 }
 
 label {
-    color:grey;
+    color:#c0c0c0;
 }
 
 #promote-input {
     padding:5px;
     width:250px;
-    color:grey;
+    color:#c0c0c0;
 }

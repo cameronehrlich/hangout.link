@@ -24,23 +24,64 @@ $(document).ready(function() {
 
     $('#next-step-signup-btn').click(function() {
         $('#signup-credit-info').hide();
-        $('#start-your-free-month').show(); 
+        $('#start-your-free-month').show();
     });
+
+    // On button press
     $('#check-avail-btn').click(function() {
+        performSubdomainCheck();
+    });
+    
+    // On return key
+    $('#subdomain-input').on( "keydown", function(event) {
+        if(event.which == 13){
+            performSubdomainCheck();
+        }
+    });
+
+    function performSubdomainCheck(){
         if (!$('#subdomain-input').val()) {
             //don't do anything if text is empty
             $(this).css({'background-color':'#6abc44', 'border-color':'#6abc44', 'color':'white'});
             return;
         } else {
-            window.location.href = '/signup/'
+            $.ajax({
+                url: 'api/check_subdomain',
+                type: 'GET',
+                dataType: 'json',
+                data: {subdomain: $('#subdomain-input').val()},
+            })
+            .done(function(results) {
+                if (results["valid"]) {
+                    // Subdomain is valid and available
+                    $('#check-avail-btn').text("Get Started!");
+                    $('#feedback-div').text("Available!");
+                    $('#feedback-div').css({'color':'#00FF00'});
+                    $('#check-avail-btn').click(function() {
+                        window.location = '/signup?subdomain='+$('#subdomain-input').val();
+                    });
+                }else{
+                    //subdomain was not valid for some reason, try again
+                    $('#check-avail-btn').text("Check Availability");
+                    $('#feedback-div').text(results["errors"].join(', '));
+                    $('#feedback-div').css({'color':'#FF0000'});
+                    $('#check-avail-btn').click(function() {
+                        performSubdomainCheck();
+                    });
+                }
+            })
+            .fail(function() {
+                $('#check-avail-btn').text("Check Availability");
+                $('#feedback-div').text("Something went wrong, try again later.");
+                $('#feedback-div').css({'color':'#FF0000'});
+                $('#check-avail-btn').click(function() {
+                    performSubdomainCheck();
+                });
+            });
         }
-    });
+    }
+
     $('#signup-nav-btn').click(function() {
         window.location.href ='/signup/';
-    })
+    });
 });
-
-window.onbeforeunload = function(event)
-{
-    return confirm("Are you sure you want to refresh? You will lose all signup progress");
-};

@@ -5,7 +5,7 @@
             Pick your personal Hangouts Address
         </h1>
         <h3 id='chosen-link' class='grey-text'>
-            https://<span id='signup-chosen-url'>samir</span>.hangouts.link&nbsp;
+            https://<span id='signup-chosen-url'><%= params[:subdomain] %></span>.hangouts.link&nbsp;
             <span id="checkmark">
                 <div id="stem"></div>
                 <div id="kick"></div>
@@ -16,7 +16,8 @@
             Or try a different one, and find the URL you like the most.
         </h4>
         <h3 id='choose-another-link' class='grey-text'>
-            https://<input id='subdomain-input' class='grey-text' type='text'></input>.hangouts.link<button type="button" id='check-avail-signup-btn' class="btn btn-default g-btn g-btn-green arial">Check Availability</button>
+            https://<input id='subdomain-input' class='grey-text' type='text' value='<%= params[:subdomain] %>'></input>.hangouts.link<button type="button" id='check-avail-btn' class="btn btn-default g-btn g-btn-green arial">Check Availability</button>
+            <div id="feedback-div"></div>
         </h3>
         <h4 class='arial grey-text' style='margin-top:40px'>    
             Sign up with your Google Plus email address
@@ -35,7 +36,7 @@
             For $1, the following domain will be reserved for you until <b>6/22/2015</b>
         </h3>
         <h4 class='grey-text' style='margin-top:30px'>
-            http://<span class='confirmed-subdomain-text'>tiffany</span>.hangouts.link&nbsp;
+            http://<span class='confirmed-subdomain-text'><%= params[:subdomain] %></span>.hangouts.link&nbsp;
             <span id="checkmark">
                 <div id="stem"></div>
                 <div id="kick"></div>

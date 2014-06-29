@@ -4,9 +4,10 @@ class User < ActiveRecord::Base
 	
 	devise :database_authenticatable, :recoverable, :rememberable, :trackable, :validatable, :omniauthable
 	
-	validates  :subdomain, 	:presence   => true,
-							:uniqueness => true,
-							:subdomain  => true
+	validates  :subdomain, 	presence: true,
+							uniqueness: true,
+							allow_blank: true,
+							subdomain: true
 
 	def self.find_for_google_oauth2(access_token, signed_in_resource=nil)
 		data = access_token.info
