@@ -1,4 +1,32 @@
 <div id='signup-content' class='container'>
+    <!-- Page One -->
+    <div id='signup-choose-domain'>
+        <h1 id='signup-choose-domain-header'>
+            Pick your personal Hangouts Address
+        </h1>
+        <h3 id='chosen-link' class='grey-text'>
+            https://<span id='signup-chosen-url'><%= params[:subdomain] %></span>.hangouts.link&nbsp;
+            <span id="checkmark">
+                <div id="stem"></div>
+                <div id="kick"></div>
+            </span>
+            <span class='green-check-text'>&nbsp;Available</span>
+        </h3>
+        <h4 class='arial grey-text' style='margin-top:60px'> 
+            Or try a different one, and find the URL you like the most.
+        </h4>
+        <h3 id='choose-another-link' class='grey-text'>
+            https://<input id='subdomain-input' class='grey-text' type='text' value='<%= params[:subdomain] %>'></input>.hangouts.link<button type="button" id='check-avail-btn' class="btn btn-default g-btn g-btn-green arial">Check Availability</button>
+            <div id="feedback-div"></div>
+        </h3>
+        <h4 class='arial grey-text' style='margin-top:40px'>    
+            Sign up with your Google Plus email address
+        </h4>
+        <a id='sign-in-btn' href='#'>
+            <%= image_tag('/assets/img/signin-google.png', height:'50')%> 
+        </a>
+    </div>
+    
     <!-- Page Two -->
     <div id='signup-credit-info'>
         <h1>
