@@ -5,11 +5,12 @@ class User < ActiveRecord::Base
 	devise :database_authenticatable, :recoverable, :rememberable, :trackable, :validatable, :omniauthable
 	
 	validates  :subdomain, 	presence: true,
-							uniqueness: true,
-							allow_blank: true,
-							subdomain: true
+	uniqueness: true,
+	allow_blank: true,
+	subdomain: true
 
 	def self.find_for_google_oauth2(access_token, signed_in_resource=nil)
+		puts access_token
 		data = access_token.info
 		user = User.where(:provider => access_token.provider, :uid => access_token.uid ).first
 		if user
@@ -19,6 +20,8 @@ class User < ActiveRecord::Base
 			if registered_user
 				return registered_user
 			else
+				
+				
 				unique_subdomain = User.generate_unique_subdomain(data["name"])
 				user = User.create(name: data["name"],
 					provider: access_token.provider,
