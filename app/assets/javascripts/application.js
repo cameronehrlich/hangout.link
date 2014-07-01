@@ -12,6 +12,7 @@
 //
 //= require jquery
 //= require jquery_ujs
+//= require stripe
 //= require_tree .
 //= require_self
 
@@ -23,8 +24,22 @@ $(document).ready(function() {
     });
 
     $('#next-step-signup-btn').click(function() {
-        $('#signup-credit-info').hide();
-        $('#start-your-free-month').show();
+        if (!$('#card-input').val() || !$('#ccv-input').val()) {
+            $('#credit-card-error').text('Please fill in both fields.')
+            $('#credit-card-error').show();
+        } else {
+            Stripe.setPublishableKey('pk_test_A0TbPAY6TCtpiOXDOylJBNvU');
+            var exp_date = $('#ccv-input').val();
+            var month = parseInt(exp_date.split("/")[0]);
+            var year = parseInt(exp_date.split("/")[1]);
+            Stripe.card.createToken({
+              number: $('#card-input').val(),
+              exp_month: month,
+              exp_year: year
+            }, stripeResponseHandler);
+        }
+        // $('#signup-credit-info').hide();
+        // $('#start-your-free-month').show();
     });
 
     // On button press
@@ -38,6 +53,27 @@ $(document).ready(function() {
             performSubdomainCheck();
         }
     });
+
+    $('#credit-card-next-btn').click(function() {
+        alert('sup')
+    });
+
+    function stripeResponseHandler(status, response) {
+
+      if (response.error) {
+        // Show the errors on the form
+        $('#credit-card-error').text(response.error.message)
+        $('#credit-card-error').show();
+      } else {
+        // response contains id and card, which contains additional card details
+        var token = response.id;
+        alert(token);
+        // Insert the token into the form so it gets submitted to the server
+        // $form.append($('<input type="hidden" name="stripeToken" />').val(token));
+        // // and submit
+        // $form.get(0).submit();
+      }
+    }
 
     function performSubdomainCheck(){
         if (!$('#subdomain-input').val()) {
