@@ -1,0 +1,9 @@
+# Add application configuration variables here, as shown below.
+
+production:
+  google_client_id: 247349502585-09p1l1cggra2nrpkk778aru4583gn1af.apps.googleusercontent.com
+  google_client_secret: PrT3Y02okooOsoUMEveg94rY
+
+development:
+  google_client_id: 98405197572-2i5ddljs87u0gd9ih3svotf24up47ntq.apps.googleusercontent.com
+  google_client_secret: KALeXKagUvSYLOjLuqbx_Rr6
