@@ -1,6 +1,12 @@
 require 'api_controller'
 class HomeController < ApplicationController
   def index
+    subdomain = request.subdomains(0).first
+    if not User.where(subdomain: subdomain).blank?
+      redirect_to User.find_by_subdomain(subdomain).hangout_url
+      return
+    end
+
   	if user_signed_in?
   		redirect_to profile_path
   		return

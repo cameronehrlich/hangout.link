@@ -1,16 +1,30 @@
-<h2>Profile</h2>
+<div class="float-center">
+	
+	<div class="input-group" style="width:500px;text-align:center;margin:0 auto;">
+		<h2>Profile</h2>
+		<br>
+		
+		<div class="well">
+			<strong style="font-size:30px;">
 
-<%= form_for(@user, :url => {:action => 'update'}, method: :POST) do |f| %>
-<%= label_tag :name %>
-<%= f.text_field :name %> <br>
+				<%= label_tag "#{@user.subdomain}.#{request.domain}" %>
+			</strong>
+			<br>
+		</div>
+		<%= form_for(@user, :url => {:action => 'update'}, method: :POST) do |f| %>
 
-<%= label_tag :email %>
-<%= f.text_field :email %> <br>
+		<span class="input-group-addon"><%= label_tag :name %></span>
+		<%= f.text_field :name, class: "form-control" %><br>
 
-<%= label_tag :subdomain %>
-<%= f.text_field :subdomain %> <br> 
+		<span class="input-group-addon"><%= label_tag :email %></span>
+		<%= f.text_field :email, class: "form-control"%><br>
 
-<%= submit_tag("Update") %>
-<% end %>
+		<span class="input-group-addon"><%= label_tag :subdomain %></span>
+		<%= f.text_field :subdomain, class: "form-control" %><br> 
 
+		<br>
 
+		<button type="submit" class="btn btn-primary">Update</button>
+		<% end %>
+	</div>
+</div>

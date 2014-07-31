@@ -4,4 +4,5 @@ class ApiController < ApplicationController
 		render json: validate_subdomain(params[:subdomain])
 	end
 
+
 end

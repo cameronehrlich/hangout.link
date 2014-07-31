@@ -81,13 +81,17 @@
 }
 
 .grey-text {
-  color:grey;
+  color:#c0c0;
 }
 
 nav {
   padding-top:15px;
   padding-bottom:15px;
   background-color:white;
+}
+
+.navbar-custom{
+  min-height: 90px;
 }
 
 .navbar-nav.navbar-right:last-child {
@@ -123,6 +127,11 @@ nav {
   #content {
     padding-top:5%;
     padding-left:15%;
+  }
+
+  .content-wrapper {
+    margin: 90px;
+
   }
 
   h1, h2, h3 {
